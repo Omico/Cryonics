@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package cryonics;
+
+option java_package = "me.omico.cryonics";
+option java_multiple_files = true;
+
+message CryonicsCookie {
+  string name = 1;
+  string value = 2;
+  int64 expiresAt = 3;
+  string domain = 4;
+  string path = 5;
+  bool secure = 6;
+  bool httpOnly = 7;
+  bool hostOnly = 8;
+}
+
+message CryonicsCookies {
+  repeated CryonicsCookie cookie = 1;
+}
